@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "halden-belted-trench",
+    "name": { "en": "Halden Belted Trench", "ar": "معطف هالدن بحزام" },
+    "category": "outerwear",
+    "price": 289,
+    "colors": ["camel"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "soldOutSizes": ["XS"],
+    "images": ["https://images.unsplash.com/photo-1539533018447-63fcce2678e3"],
+    "description": {
+      "en": "A softly structured trench in water-repellent cotton gabardine, cut long with a self-tie belt and deep storm flap.",
+      "ar": "معطف ترنش بقصّة ناعمة من قماش الغبردين القطني المقاوم للماء، طويل مع حزام للربط وواقٍ عميق للمطر."
+    },
+    "material": { "en": "100% cotton gabardine", "ar": "100٪ غبردين قطني" },
+    "rating": 4.8,
+    "reviewCount": 214,
+    "tags": ["bestseller"],
+    "createdAt": "2026-09-02"
+  },
+  {
+    "id": "marlow-leather-biker",
+    "name": { "en": "Marlow Leather Biker", "ar": "جاكيت مارلو الجلدي" },
+    "category": "outerwear",
+    "price": 395,
+    "colors": ["black"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5",
+      "https://images.unsplash.com/photo-1520975954732-35dd22299614"
+    ],
+    "description": {
+      "en": "Vegetable-tanned lambskin that softens with every wear. Asymmetric zip, snap lapels and a quilted lining.",
+      "ar": "جلد خروف مدبوغ نباتيًا يزداد نعومة مع كل ارتداء، بسحّاب جانبي وياقة بأزرار كبس وبطانة مبطّنة."
+    },
+    "material": { "en": "Lambskin leather, viscose lining", "ar": "جلد خروف، بطانة فيسكوز" },
+    "rating": 4.9,
+    "reviewCount": 176,
+    "tags": ["bestseller"],
+    "createdAt": "2026-08-14"
+  },
+  {
+    "id": "ridge-field-jacket",
+    "name": { "en": "Ridge Field Jacket", "ar": "جاكيت ريدج الميداني" },
+    "category": "outerwear",
+    "price": 210,
+    "colors": ["olive"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1544022613-e87ca75a784a"],
+    "description": {
+      "en": "A garment-washed field jacket in heavy cotton twill with four bellows pockets and a relaxed, slightly cropped body.",
+      "ar": "جاكيت ميداني مغسول من قطن تويل ثقيل بأربعة جيوب منفوخة وقصّة مريحة قصيرة قليلًا."
+    },
+    "material": { "en": "100% organic cotton twill", "ar": "100٪ تويل قطن عضوي" },
+    "rating": 4.6,
+    "reviewCount": 98,
+    "tags": [],
+    "createdAt": "2026-07-21"
+  },
+  {
+    "id": "saltwater-denim-jacket",
+    "name": { "en": "Saltwater Denim Jacket", "ar": "جاكيت سولت ووتر الجينز" },
+    "category": "outerwear",
+    "price": 165,
+    "colors": ["indigo", "chambray"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7",
+      "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef"
+    ],
+    "description": {
+      "en": "Rigid Japanese denim with a corduroy collar and copper shanks. Wears in beautifully, fades only where you do.",
+      "ar": "جينز ياباني متين بياقة من المخمل المضلّع وأزرار نحاسية، يتشكّل مع الوقت حسب حركتك."
+    },
+    "material": { "en": "14oz selvedge cotton denim", "ar": "جينز قطني 14 أونصة" },
+    "rating": 4.7,
+    "reviewCount": 143,
+    "tags": [],
+    "createdAt": "2026-06-30"
+  },
+  {
+    "id": "tobacco-suede-overshirt",
+    "name": { "en": "Tobacco Suede Overshirt", "ar": "قميص توباكو الخارجي من الشامواه" },
+    "category": "outerwear",
+    "price": 240,
+    "colors": ["tan"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1617114919297-3c8ddb01f599"],
+    "description": {
+      "en": "Brushed goat suede cut like a shirt, with a point collar and twin chest pockets. Layer it from September to May.",
+      "ar": "شامواه ماعز مصقول بقصّة القميص، بياقة مدبّبة وجيبين على الصدر. مثالي للطبقات من سبتمبر حتى مايو."
+    },
+    "material": { "en": "Goat suede, cupro lining", "ar": "شامواه ماعز، بطانة كوبرو" },
+    "rating": 4.5,
+    "reviewCount": 61,
+    "tags": ["new"],
+    "createdAt": "2026-10-18"
+  },
+  {
+    "id": "ember-satin-bomber",
+    "name": { "en": "Ember Satin Bomber", "ar": "جاكيت إمبر بومبر الساتان" },
+    "category": "outerwear",
+    "price": 175,
+    "compareAtPrice": 220,
+    "colors": ["rust"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "soldOutSizes": ["S"],
+    "images": ["https://images.unsplash.com/photo-1591047139829-d91aecb6caea"],
+    "description": {
+      "en": "A lightweight bomber in a fluid recycled satin with ribbed trims and a hidden inner pocket.",
+      "ar": "جاكيت بومبر خفيف من ساتان معاد تدويره بحواف مضلّعة وجيب داخلي مخفي."
+    },
+    "material": { "en": "Recycled polyester satin", "ar": "ساتان بوليستر معاد تدويره" },
+    "rating": 4.3,
+    "reviewCount": 57,
+    "tags": [],
+    "createdAt": "2026-06-12"
+  },
+  {
+    "id": "lune-oversized-blazer",
+    "name": { "en": "Lune Oversized Blazer", "ar": "بليزر لون الواسع" },
+    "category": "outerwear",
+    "price": 260,
+    "colors": ["ivory", "black"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1632149877166-f75d49000351"],
+    "description": {
+      "en": "A long, dropped-shoulder blazer in a dense wool crepe. Wear it belted as a dress or open over denim.",
+      "ar": "بليزر طويل بأكتاف منسدلة من كريب صوفي كثيف، يُرتدى بحزام كفستان أو مفتوحًا فوق الجينز."
+    },
+    "material": { "en": "Wool crepe, viscose lining", "ar": "كريب صوفي، بطانة فيسكوز" },
+    "rating": 4.7,
+    "reviewCount": 88,
+    "tags": ["new"],
+    "createdAt": "2026-10-30"
+  },
+  {
+    "id": "bordeaux-double-face-coat",
+    "name": { "en": "Bordeaux Double-Face Coat", "ar": "معطف بوردو مزدوج الوجه" },
+    "category": "outerwear",
+    "price": 340,
+    "colors": ["burgundy", "camel"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1483985988355-763728e1935b"],
+    "description": {
+      "en": "Hand-finished double-face wool with no lining, so it drapes like a blanket and weighs almost nothing.",
+      "ar": "صوف مزدوج الوجه مشطّب يدويًا بلا بطانة، ينسدل كالبطانية ووزنه خفيف جدًا."
+    },
+    "material": { "en": "90% wool, 10% cashmere", "ar": "90٪ صوف، 10٪ كشمير" },
+    "rating": 4.9,
+    "reviewCount": 122,
+    "tags": ["limited"],
+    "createdAt": "2026-09-25"
+  },
+  {
+    "id": "fenwick-check-coat",
+    "name": { "en": "Fenwick Check Coat", "ar": "معطف فنويك المربّعات" },
+    "category": "outerwear",
+    "price": 310,
+    "compareAtPrice": 365,
+    "colors": ["navy"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1485968579580-b6d095142e6e"],
+    "description": {
+      "en": "A boyish, single-breasted coat in a brushed Shetland check, finished with horn buttons.",
+      "ar": "معطف بصفّ أزرار واحد من صوف شتلاند المربّع المصقول، بأزرار من القرن."
+    },
+    "material": { "en": "100% Shetland wool", "ar": "100٪ صوف شتلاند" },
+    "rating": 4.6,
+    "reviewCount": 74,
+    "tags": [],
+    "createdAt": "2026-08-03"
+  },
+  {
+    "id": "duomo-cocoon-coat",
+    "name": { "en": "Duomo Cocoon Coat", "ar": "معطف دومو الواسع" },
+    "category": "outerwear",
+    "price": 298,
+    "colors": ["chambray", "oat"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1539109136881-3be0616acf4b"],
+    "description": {
+      "en": "A rounded cocoon silhouette in soft boiled wool, with a shawl collar and slip pockets.",
+      "ar": "قصّة شرنقية مستديرة من الصوف المغلي الناعم، بياقة شال وجيوب جانبية."
+    },
+    "material": { "en": "Boiled merino wool", "ar": "صوف ميرينو مغلي" },
+    "rating": 4.4,
+    "reviewCount": 39,
+    "tags": ["new"],
+    "createdAt": "2026-11-01"
+  },
+  {
+    "id": "rosa-flutter-midi",
+    "name": { "en": "Rosa Flutter Midi Dress", "ar": "فستان روزا الميدي" },
+    "category": "dresses",
+    "price": 145,
+    "colors": ["red"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1572804013309-59a88b7e92f1"],
+    "description": {
+      "en": "A full-skirted midi in a printed cotton voile with flutter sleeves and a covered buckle belt.",
+      "ar": "فستان ميدي بتنورة واسعة من الفوال القطني المطبوع بأكمام متموّجة وحزام بإبزيم مغطّى."
+    },
+    "material": { "en": "100% cotton voile", "ar": "100٪ فوال قطني" },
+    "rating": 4.7,
+    "reviewCount": 165,
+    "tags": ["bestseller"],
+    "createdAt": "2026-06-08"
+  },
+  {
+    "id": "dune-linen-shirt-dress",
+    "name": { "en": "Dune Linen Shirt Dress", "ar": "فستان دون القميصي من الكتان" },
+    "category": "dresses",
+    "price": 158,
+    "colors": ["ivory"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1617019114583-affb34d1b3cd"],
+    "description": {
+      "en": "Stone-washed European linen in an easy, oversized shirt shape that can be worn open as a light layer.",
+      "ar": "كتان أوروبي مغسول بالحجر بقصّة قميص واسعة، يمكن ارتداؤه مفتوحًا كطبقة خفيفة."
+    },
+    "material": { "en": "100% European linen", "ar": "100٪ كتان أوروبي" },
+    "rating": 4.6,
+    "reviewCount": 92,
+    "tags": [],
+    "createdAt": "2026-07-04"
+  },
+  {
+    "id": "cala-pleated-maxi",
+    "name": { "en": "Cala Pleated Maxi", "ar": "فستان كالا الطويل" },
+    "category": "dresses",
+    "price": 210,
+    "colors": ["red", "black"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1595777457583-95e059d581b8"],
+    "description": {
+      "en": "Sun-ray pleats that move with you, a fitted bodice and a low back. Fully lined in silk-touch satin.",
+      "ar": "طيّات شمسية تتحرّك معك وصدر محدّد وظهر مكشوف، مبطّن بالكامل بساتان ناعم كالحرير."
+    },
+    "material": {
+      "en": "Recycled georgette, satin lining",
+      "ar": "جورجيت معاد تدويره، بطانة ساتان"
+    },
+    "rating": 4.8,
+    "reviewCount": 131,
+    "tags": ["bestseller"],
+    "createdAt": "2026-08-22"
+  },
+  {
+    "id": "aubergine-off-shoulder-gown",
+    "name": { "en": "Aubergine Off-Shoulder Gown", "ar": "فستان أوبرجين بأكتاف مكشوفة" },
+    "category": "dresses",
+    "price": 245,
+    "colors": ["plum"],
+    "sizes": ["XS", "S", "M", "L"],
+    "soldOutSizes": ["L"],
+    "images": ["https://images.unsplash.com/photo-1566174053879-31528523f8ae"],
+    "description": {
+      "en": "A bias-cut column in heavy satin crepe with a folded off-shoulder neckline. Evening, simplified.",
+      "ar": "فستان مستقيم بقصّة مائلة من كريب الساتان الثقيل بياقة مطوية على الأكتاف. أناقة المساء ببساطة."
+    },
+    "material": { "en": "Triacetate satin crepe", "ar": "كريب ساتان تراي أسيتات" },
+    "rating": 4.9,
+    "reviewCount": 47,
+    "tags": ["limited"],
+    "createdAt": "2026-10-11"
+  },
+  {
+    "id": "shore-chambray-dress",
+    "name": { "en": "Shore Chambray Button Dress", "ar": "فستان شور الشامبري بأزرار" },
+    "category": "dresses",
+    "price": 120,
+    "compareAtPrice": 150,
+    "colors": ["chambray"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1591369822096-ffd140ec948f"],
+    "description": {
+      "en": "A button-through chambray dress with patch pockets and a nipped, self-tie waist.",
+      "ar": "فستان شامبري بأزرار أمامية وجيوب خارجية وخصر محدّد بربطة."
+    },
+    "material": { "en": "100% cotton chambray", "ar": "100٪ شامبري قطني" },
+    "rating": 4.4,
+    "reviewCount": 83,
+    "tags": [],
+    "createdAt": "2026-06-19"
+  },
+  {
+    "id": "merlot-corduroy-midi",
+    "name": { "en": "Merlot Corduroy Midi", "ar": "فستان ميرلو المخملي المضلّع" },
+    "category": "dresses",
+    "price": 135,
+    "colors": ["burgundy"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03"],
+    "description": {
+      "en": "Needlecord softened with an enzyme wash, cut into a gathered midi with a placket front and puff cuffs.",
+      "ar": "مخمل مضلّع رفيع مغسول بالإنزيمات، بقصّة ميدي مكشكشة وأزرار أمامية وأساور منفوخة."
+    },
+    "material": { "en": "100% cotton needlecord", "ar": "100٪ مخمل قطني مضلّع" },
+    "rating": 4.5,
+    "reviewCount": 66,
+    "tags": ["new"],
+    "createdAt": "2026-10-24"
+  },
+  {
+    "id": "saffron-embroidered-kaftan",
+    "name": { "en": "Saffron Embroidered Kaftan", "ar": "قفطان زعفران المطرّز" },
+    "category": "dresses",
+    "price": 185,
+    "colors": ["saffron"],
+    "sizes": ["S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1605763240000-7e93b172d754"],
+    "description": {
+      "en": "Hand-embroidered by a family atelier in Jaipur, in breathable cotton mulmul with a self-tie waist cord.",
+      "ar": "مطرّز يدويًا في مشغل عائلي في جايبور، من قطن الململ الخفيف مع حبل للربط عند الخصر."
+    },
+    "material": { "en": "Cotton mulmul, silk thread", "ar": "قطن ململ، خيوط حريرية" },
+    "rating": 4.8,
+    "reviewCount": 54,
+    "tags": ["limited"],
+    "createdAt": "2026-07-28"
+  },
+  {
+    "id": "ondine-lace-gown",
+    "name": { "en": "Ondine Lace Gown", "ar": "فستان أوندين الدانتيل" },
+    "category": "dresses",
+    "price": 268,
+    "colors": ["navy"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1551803091-e20673f15770"],
+    "description": {
+      "en": "Corded lace with sculpted side cut-outs and long, sheer sleeves. Fitted through the waist, fluid to the floor.",
+      "ar": "دانتيل مطرّز بفتحات جانبية منحوتة وأكمام طويلة شفّافة، محدّد عند الخصر وينسدل حتى الأرض."
+    },
+    "material": {
+      "en": "Cotton-blend lace, jersey lining",
+      "ar": "دانتيل قطني مخلوط، بطانة جيرسي"
+    },
+    "rating": 4.7,
+    "reviewCount": 38,
+    "tags": [],
+    "createdAt": "2026-09-09"
+  },
+  {
+    "id": "blanc-tiered-mini",
+    "name": { "en": "Blanc Tiered Mini", "ar": "فستان بلان القصير بطبقات" },
+    "category": "dresses",
+    "price": 112,
+    "colors": ["white"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1515372039744-b8f02a3ae446"],
+    "description": {
+      "en": "An off-shoulder broderie mini with a smocked bodice and two softly gathered tiers.",
+      "ar": "فستان قصير بأكتاف مكشوفة من قماش البروديري بصدر مكشكش وطبقتين متموّجتين."
+    },
+    "material": { "en": "Organic cotton broderie", "ar": "بروديري قطن عضوي" },
+    "rating": 4.3,
+    "reviewCount": 72,
+    "tags": [],
+    "createdAt": "2026-06-02"
+  },
+  {
+    "id": "rosewater-ruffle-dress",
+    "name": { "en": "Rosewater Ruffle Dress", "ar": "فستان روزووتر بالكشكش" },
+    "category": "dresses",
+    "price": 228,
+    "colors": ["blush"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1581044777550-4cfa60707c03"],
+    "description": {
+      "en": "Cloud-like ruffles of washed silk organza over a slip, with a sweetheart neckline and balloon sleeves.",
+      "ar": "كشكش كالسحاب من أورجانزا الحرير المغسولة فوق فستان داخلي، بياقة على شكل قلب وأكمام منفوخة."
+    },
+    "material": { "en": "Silk organza, cupro slip", "ar": "أورجانزا حرير، فستان داخلي كوبرو" },
+    "rating": 4.8,
+    "reviewCount": 29,
+    "tags": ["new", "limited"],
+    "createdAt": "2026-11-04"
+  },
+  {
+    "id": "essential-crew-tee",
+    "name": { "en": "Essential Crew Tee", "ar": "تيشيرت إسنشيال برقبة دائرية" },
+    "category": "tops",
+    "price": 38,
+    "colors": ["white", "black", "navy", "red", "saffron"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+      "https://images.unsplash.com/photo-1562157873-818bc0726f68"
+    ],
+    "description": {
+      "en": "Our most-worn piece: a mid-weight Supima jersey tee with a close neckline that holds its shape wash after wash.",
+      "ar": "القطعة الأكثر ارتداءً لدينا: تيشيرت من جيرسي سوبيما متوسط الوزن برقبة محكمة تحافظ على شكلها بعد كل غسلة."
+    },
+    "material": { "en": "100% Supima cotton jersey", "ar": "100٪ جيرسي قطن سوبيما" },
+    "rating": 4.7,
+    "reviewCount": 612,
+    "tags": ["bestseller"],
+    "createdAt": "2026-06-01"
+  },
+  {
+    "id": "everyday-poplin-shirt",
+    "name": { "en": "Everyday Poplin Shirt", "ar": "قميص إيفري داي من البوبلين" },
+    "category": "tops",
+    "price": 95,
+    "colors": ["navy", "white", "burgundy"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf",
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157"
+    ],
+    "description": {
+      "en": "Crisp two-ply poplin with a soft-roll collar and mother-of-pearl buttons. Tailored, never stiff.",
+      "ar": "بوبلين مزدوج الخيط بياقة ناعمة وأزرار من الصدف. مفصّل دون أن يكون متيبّسًا."
+    },
+    "material": { "en": "100% two-ply cotton poplin", "ar": "100٪ بوبلين قطني مزدوج" },
+    "rating": 4.6,
+    "reviewCount": 204,
+    "tags": ["bestseller"],
+    "createdAt": "2026-07-11"
+  },
+  {
+    "id": "oxford-button-down",
+    "name": { "en": "Oxford Button-Down", "ar": "قميص أكسفورد بأزرار" },
+    "category": "tops",
+    "price": 98,
+    "colors": ["chambray", "white"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1588359348347-9bc6cbbb689e"],
+    "description": {
+      "en": "Brushed Oxford cloth with a full-roll button-down collar and a back box pleat for ease.",
+      "ar": "قماش أكسفورد مصقول بياقة بأزرار وطيّة خلفية لراحة الحركة."
+    },
+    "material": { "en": "100% cotton Oxford", "ar": "100٪ أكسفورد قطني" },
+    "rating": 4.5,
+    "reviewCount": 118,
+    "tags": [],
+    "createdAt": "2026-08-09"
+  },
+  {
+    "id": "atelier-dress-shirt",
+    "name": { "en": "Atelier Dress Shirt", "ar": "قميص أتيليه الرسمي" },
+    "category": "tops",
+    "price": 115,
+    "colors": ["white"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10"],
+    "description": {
+      "en": "A sharp cutaway collar, single-button cuffs and a slim body in a fine Egyptian twill.",
+      "ar": "ياقة مفتوحة حادّة وأساور بزرّ واحد وقصّة نحيفة من تويل مصري ناعم."
+    },
+    "material": { "en": "100% Egyptian cotton twill", "ar": "100٪ تويل قطن مصري" },
+    "rating": 4.6,
+    "reviewCount": 86,
+    "tags": [],
+    "createdAt": "2026-07-17"
+  },
+  {
+    "id": "pinstripe-tailored-shirt",
+    "name": { "en": "Pinstripe Tailored Shirt", "ar": "قميص مخطّط مفصّل" },
+    "category": "tops",
+    "price": 105,
+    "colors": ["navy"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa"],
+    "description": {
+      "en": "A slightly oversized shirt in fine pinstripe cotton, with a long tail made for tucking.",
+      "ar": "قميص واسع قليلًا من القطن المخطّط الناعم، بذيل طويل مصمّم ليُدسّ داخل التنورة أو البنطال."
+    },
+    "material": { "en": "100% cotton shirting", "ar": "100٪ قماش قمصان قطني" },
+    "rating": 4.4,
+    "reviewCount": 51,
+    "tags": [],
+    "createdAt": "2026-09-14"
+  },
+  {
+    "id": "ruffle-poplin-blouse",
+    "name": { "en": "Ruffle Poplin Blouse", "ar": "بلوزة بوبلين بالكشكش" },
+    "category": "tops",
+    "price": 110,
+    "colors": ["white"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda"],
+    "description": {
+      "en": "A cropped off-shoulder blouse with tiered ruffle sleeves and an elasticated neckline.",
+      "ar": "بلوزة قصيرة بأكتاف مكشوفة وأكمام بطبقات من الكشكش وياقة مطّاطية."
+    },
+    "material": { "en": "Organic cotton poplin", "ar": "بوبلين قطن عضوي" },
+    "rating": 4.5,
+    "reviewCount": 44,
+    "tags": ["new"],
+    "createdAt": "2026-10-27"
+  },
+  {
+    "id": "dot-chambray-shirt",
+    "name": { "en": "Dot Chambray Shirt", "ar": "قميص شامبري منقّط" },
+    "category": "tops",
+    "price": 89,
+    "compareAtPrice": 110,
+    "colors": ["indigo"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1596755094514-f87e34085b2c"],
+    "description": {
+      "en": "Indigo chambray scattered with a discharge-printed micro dot, finished with three-quarter sleeves.",
+      "ar": "شامبري نيلي بنقاط صغيرة مطبوعة، بأكمام ثلاثة أرباع."
+    },
+    "material": { "en": "100% cotton chambray", "ar": "100٪ شامبري قطني" },
+    "rating": 4.2,
+    "reviewCount": 37,
+    "tags": [],
+    "createdAt": "2026-06-25"
+  },
+  {
+    "id": "merino-long-sleeve",
+    "name": { "en": "Fine Merino Long-Sleeve", "ar": "قميص ميرينو بأكمام طويلة" },
+    "category": "tops",
+    "price": 92,
+    "colors": ["black", "grey"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1614495039153-e9cd13240469"],
+    "description": {
+      "en": "An 18.5-micron merino jersey that regulates temperature and resists odour. The base layer, perfected.",
+      "ar": "جيرسي ميرينو 18.5 ميكرون ينظّم الحرارة ويقاوم الروائح. الطبقة الأساسية بأفضل صورها."
+    },
+    "material": { "en": "100% extra-fine merino", "ar": "100٪ ميرينو فائق النعومة" },
+    "rating": 4.8,
+    "reviewCount": 158,
+    "tags": [],
+    "createdAt": "2026-09-20"
+  },
+  {
+    "id": "hearth-cable-crew",
+    "name": { "en": "Hearth Cable Crew", "ar": "كنزة هيرث المجدولة" },
+    "category": "knitwear",
+    "price": 168,
+    "colors": ["oat", "ivory"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1631541909061-71e349d1f203",
+      "https://images.unsplash.com/photo-1558769132-cb1aea458c5e"
+    ],
+    "description": {
+      "en": "A chunky hand-framed cable knit in undyed British wool, with a boxy body and dropped shoulders.",
+      "ar": "كنزة مجدولة سميكة محاكة يدويًا من صوف بريطاني غير مصبوغ، بقصّة مربّعة وأكتاف منسدلة."
+    },
+    "material": { "en": "100% British wool", "ar": "100٪ صوف بريطاني" },
+    "rating": 4.9,
+    "reviewCount": 197,
+    "tags": ["bestseller", "new"],
+    "createdAt": "2026-10-20"
+  },
+  {
+    "id": "marigold-lambswool-crew",
+    "name": { "en": "Marigold Lambswool Crew", "ar": "كنزة ماريغولد من صوف الحملان" },
+    "category": "knitwear",
+    "price": 118,
+    "colors": ["saffron", "camel"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1578587018452-892bacefd3f2"],
+    "description": {
+      "en": "Featherweight Scottish lambswool in a colour that lifts grey days. Fully fashioned for a clean fit.",
+      "ar": "صوف حملان اسكتلندي خفيف كالريشة بلون يبهج الأيام الرمادية، محاك بالكامل لقصّة نظيفة."
+    },
+    "material": { "en": "100% Scottish lambswool", "ar": "100٪ صوف حملان اسكتلندي" },
+    "rating": 4.6,
+    "reviewCount": 109,
+    "tags": [],
+    "createdAt": "2026-09-01"
+  },
+  {
+    "id": "cloud-fleece-sweatshirt",
+    "name": { "en": "Cloud Fleece Sweatshirt", "ar": "سويت شيرت كلاود من الفليس" },
+    "category": "knitwear",
+    "price": 84,
+    "colors": ["white", "grey"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1620799140408-edc6dcb6d633"],
+    "description": {
+      "en": "Brushed-back organic fleece with flatlock seams and a generous, slouchy shape.",
+      "ar": "فليس عضوي مصقول من الداخل بخياطات مسطّحة وقصّة واسعة مريحة."
+    },
+    "material": { "en": "100% organic cotton fleece", "ar": "100٪ فليس قطن عضوي" },
+    "rating": 4.5,
+    "reviewCount": 231,
+    "tags": [],
+    "createdAt": "2026-07-07"
+  },
+  {
+    "id": "fog-pullover-hoodie",
+    "name": { "en": "Fog Pullover Hoodie", "ar": "هودي فوغ" },
+    "category": "knitwear",
+    "price": 98,
+    "colors": ["grey", "black"],
+    "sizes": ["S", "M", "L", "XL"],
+    "soldOutSizes": ["M"],
+    "images": ["https://images.unsplash.com/photo-1556821840-3a63f95609a7"],
+    "description": {
+      "en": "A heavyweight loopback hoodie with a double-layer hood and no drawcords, for a cleaner line.",
+      "ar": "هودي ثقيل بنسيج حلقي وقبعة مزدوجة الطبقة دون أربطة، لخطوط أنظف."
+    },
+    "material": { "en": "Organic cotton loopback", "ar": "قطن عضوي بنسيج حلقي" },
+    "rating": 4.7,
+    "reviewCount": 189,
+    "tags": ["bestseller"],
+    "createdAt": "2026-08-18"
+  },
+  {
+    "id": "chevron-intarsia-sweater",
+    "name": { "en": "Chevron Intarsia Sweater", "ar": "كنزة شيفرون" },
+    "category": "knitwear",
+    "price": 142,
+    "colors": ["rust"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1475180098004-ca77a66827be"],
+    "description": {
+      "en": "A bold intarsia chevron knitted in alpaca and wool, cropped to sit just above the hip.",
+      "ar": "نقشة شيفرون جريئة محاكة من الألبكة والصوف، بطول قصير يصل فوق الورك."
+    },
+    "material": { "en": "60% alpaca, 40% wool", "ar": "60٪ ألبكة، 40٪ صوف" },
+    "rating": 4.4,
+    "reviewCount": 46,
+    "tags": [],
+    "createdAt": "2026-08-28"
+  },
+  {
+    "id": "fringe-crochet-poncho",
+    "name": { "en": "Fringe Crochet Poncho", "ar": "بونشو كروشيه بأهداب" },
+    "category": "knitwear",
+    "price": 96,
+    "colors": ["ivory"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1434389677669-e08b4cac3105"],
+    "description": {
+      "en": "Hand-crocheted in an open stitch with a deep V and finger-length fringing. Throw it over anything.",
+      "ar": "كروشيه يدوي بغرزة مفتوحة وياقة V عميقة وأهداب طويلة. يُرتدى فوق أي إطلالة."
+    },
+    "material": { "en": "100% recycled cotton yarn", "ar": "100٪ خيط قطن معاد تدويره" },
+    "rating": 4.3,
+    "reviewCount": 33,
+    "tags": [],
+    "createdAt": "2026-06-15"
+  },
+  {
+    "id": "selvedge-straight-jean",
+    "name": { "en": "Selvedge Straight Jean", "ar": "جينز مستقيم سيلفيدج" },
+    "category": "bottoms",
+    "price": 135,
+    "colors": ["indigo", "black"],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
+      "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0"
+    ],
+    "description": {
+      "en": "A mid-rise straight leg in rinse-washed selvedge denim, woven on vintage shuttle looms.",
+      "ar": "جينز بخصر متوسط وساق مستقيمة من دنيم سيلفيدج مغسول، منسوج على أنوال تقليدية."
+    },
+    "material": { "en": "13.5oz selvedge denim", "ar": "دنيم سيلفيدج 13.5 أونصة" },
+    "rating": 4.7,
+    "reviewCount": 276,
+    "tags": ["bestseller"],
+    "createdAt": "2026-07-01"
+  },
+  {
+    "id": "vintage-boyfriend-jean",
+    "name": { "en": "Vintage Boyfriend Jean", "ar": "جينز بويفريند فينتاج" },
+    "category": "bottoms",
+    "price": 118,
+    "colors": ["chambray"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1541099649105-f69ad21f3246"],
+    "description": {
+      "en": "Relaxed through the hip and tapered at the ankle, with hand-finished abrasion and repair patches.",
+      "ar": "واسع عند الورك وضيّق عند الكاحل، بتآكل مشطّب يدويًا ورقع ترميم."
+    },
+    "material": { "en": "100% cotton denim", "ar": "100٪ دنيم قطني" },
+    "rating": 4.3,
+    "reviewCount": 94,
+    "tags": [],
+    "createdAt": "2026-06-21"
+  },
+  {
+    "id": "frayed-denim-short",
+    "name": { "en": "Frayed Denim Short", "ar": "شورت جينز بحواف ممزّقة" },
+    "category": "bottoms",
+    "price": 68,
+    "compareAtPrice": 85,
+    "colors": ["chambray"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1591195853828-11db59a44f6b"],
+    "description": {
+      "en": "A high-rise short in light vintage-wash denim with a rolled, frayed hem.",
+      "ar": "شورت بخصر عالٍ من دنيم فاتح بغسلة فينتاج وحافة ملفوفة ممزّقة."
+    },
+    "material": { "en": "100% recycled cotton denim", "ar": "100٪ دنيم قطني معاد تدويره" },
+    "rating": 4.2,
+    "reviewCount": 58,
+    "tags": [],
+    "createdAt": "2026-06-05"
+  },
+  {
+    "id": "rose-satin-cargo",
+    "name": { "en": "Rose Satin Cargo", "ar": "بنطال كارغو روز الساتان" },
+    "category": "bottoms",
+    "price": 96,
+    "colors": ["blush"],
+    "sizes": ["XS", "S", "M", "L"],
+    "images": ["https://images.unsplash.com/photo-1594633312681-425c7b97ccd1"],
+    "description": {
+      "en": "Utility pockets meet fluid washed satin, with a paperbag waist and elasticated cuffs.",
+      "ar": "جيوب عملية مع ساتان مغسول منساب، بخصر مكشكش وأساور مطّاطية عند الكاحل."
+    },
+    "material": { "en": "Washed viscose satin", "ar": "ساتان فيسكوز مغسول" },
+    "rating": 4.4,
+    "reviewCount": 41,
+    "tags": ["new"],
+    "createdAt": "2026-10-15"
+  },
+  {
+    "id": "stone-pleated-chino",
+    "name": { "en": "Stone Pleated Chino", "ar": "بنطال تشينو ستون بطيّات" },
+    "category": "bottoms",
+    "price": 98,
+    "colors": ["stone", "olive", "navy"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a"],
+    "description": {
+      "en": "A single-pleat chino in garment-dyed cotton twill with a tapered leg and adjustable side tabs.",
+      "ar": "تشينو بطيّة واحدة من تويل قطني مصبوغ بعد الخياطة، بساق مستدقّة وأشرطة جانبية قابلة للتعديل."
+    },
+    "material": { "en": "98% cotton, 2% elastane", "ar": "98٪ قطن، 2٪ إيلاستين" },
+    "rating": 4.6,
+    "reviewCount": 167,
+    "tags": [],
+    "createdAt": "2026-07-25"
+  },
+  {
+    "id": "workwear-slim-jean",
+    "name": { "en": "Workwear Slim Jean", "ar": "جينز ووركوير الضيّق" },
+    "category": "bottoms",
+    "price": 125,
+    "colors": ["indigo"],
+    "sizes": ["S", "M", "L", "XL"],
+    "images": ["https://images.unsplash.com/photo-1638247025967-b4e38f787b76"],
+    "description": {
+      "en": "A slim, stacked leg in dark raw denim with reinforced bar tacks and a button fly.",
+      "ar": "جينز بساق ضيّقة من دنيم خام داكن بخياطات مقوّاة وأزرار أمامية."
+    },
+    "material": { "en": "12oz raw cotton denim", "ar": "دنيم قطني خام 12 أونصة" },
+    "rating": 4.5,
+    "reviewCount": 102,
+    "tags": [],
+    "createdAt": "2026-09-30"
+  },
+  {
+    "id": "bruno-leather-derby",
+    "name": { "en": "Bruno Leather Derby", "ar": "حذاء ديربي برونو الجلدي" },
+    "category": "shoes",
+    "price": 210,
+    "colors": ["tan", "black"],
+    "sizes": ["40", "41", "42", "43", "44", "45"],
+    "soldOutSizes": ["45"],
+    "images": ["https://images.unsplash.com/photo-1614252235316-8c857d38b5f4"],
+    "description": {
+      "en": "Hand-burnished calf leather on a Goodyear-welted sole that can be resoled for decades.",
+      "ar": "جلد عجل مصقول يدويًا على نعل مخيط بطريقة غوديير يمكن تجديده لعقود."
+    },
+    "material": { "en": "Calf leather, leather sole", "ar": "جلد عجل، نعل جلدي" },
+    "rating": 4.8,
+    "reviewCount": 133,
+    "tags": [],
+    "createdAt": "2026-08-11"
+  },
+  {
+    "id": "atlas-lace-up-boot",
+    "name": { "en": "Atlas Lace-Up Boot", "ar": "بوت أطلس برباط" },
+    "category": "shoes",
+    "price": 248,
+    "colors": ["brown"],
+    "sizes": ["40", "41", "42", "43", "44", "45"],
+    "images": ["https://images.unsplash.com/photo-1608256246200-53e635b5b65f"],
+    "description": {
+      "en": "A sleek service boot in waxed chocolate leather with a stacked heel and a cushioned cork footbed.",
+      "ar": "بوت أنيق من الجلد الشمعي البني بكعب متدرّج ونعل داخلي مبطّن من الفلّين."
+    },
+    "material": { "en": "Waxed leather, rubber sole", "ar": "جلد شمعي، نعل مطّاطي" },
+    "rating": 4.7,
+    "reviewCount": 87,
+    "tags": ["new"],
+    "createdAt": "2026-10-08"
+  },
+  {
+    "id": "canyon-work-boot",
+    "name": { "en": "Canyon Work Boot", "ar": "بوت كانيون للعمل" },
+    "category": "shoes",
+    "price": 232,
+    "colors": ["camel"],
+    "sizes": ["38", "39", "40", "41", "42", "43", "44", "45"],
+    "images": ["https://images.unsplash.com/photo-1520639888713-7851133b1ed0"],
+    "description": {
+      "en": "Water-resistant nubuck with a lugged commando sole, padded collar and speed-hook lacing.",
+      "ar": "جلد نوبوك مقاوم للماء بنعل خشن متين وياقة مبطّنة وخطّافات سريعة للرباط."
+    },
+    "material": { "en": "Nubuck leather, Vibram® sole", "ar": "جلد نوبوك، نعل فيبرام" },
+    "rating": 4.6,
+    "reviewCount": 149,
+    "tags": ["bestseller"],
+    "createdAt": "2026-08-30"
+  },
+  {
+    "id": "contour-cork-sandal",
+    "name": { "en": "Contour Cork Sandal", "ar": "صندل كونتور بنعل فلّين" },
+    "category": "shoes",
+    "price": 88,
+    "colors": ["stone"],
+    "sizes": ["36", "37", "38", "39", "40", "41", "42", "43"],
+    "images": ["https://images.unsplash.com/photo-1603487742131-4160ec999306"],
+    "description": {
+      "en": "A two-strap slide on an anatomical cork-latex footbed that moulds to your foot over time.",
+      "ar": "صندل بشريطين على نعل تشريحي من الفلّين واللاتكس يتشكّل مع قدمك بمرور الوقت."
+    },
+    "material": {
+      "en": "Suede straps, cork-latex footbed",
+      "ar": "أشرطة شامواه، نعل فلّين ولاتكس"
+    },
+    "rating": 4.5,
+    "reviewCount": 211,
+    "tags": [],
+    "createdAt": "2026-06-10"
+  },
+  {
+    "id": "flora-printed-stiletto",
+    "name": { "en": "Flora Printed Stiletto", "ar": "كعب فلورا المطبوع" },
+    "category": "shoes",
+    "price": 178,
+    "colors": ["navy"],
+    "sizes": ["36", "37", "38", "39", "40", "41"],
+    "images": ["https://images.unsplash.com/photo-1543163521-1bf539c55dd2"],
+    "description": {
+      "en": "A pointed pump in a botanical print satin on a slender 95mm heel, with a padded leather insole.",
+      "ar": "حذاء مدبّب من الساتان بنقشة نباتية على كعب رفيع 95 ملم، بنعل داخلي جلدي مبطّن."
+    },
+    "material": { "en": "Printed satin, leather lining", "ar": "ساتان مطبوع، بطانة جلدية" },
+    "rating": 4.4,
+    "reviewCount": 36,
+    "tags": ["limited"],
+    "createdAt": "2026-09-17"
+  },
+  {
+    "id": "prism-runner",
+    "name": { "en": "Prism Runner", "ar": "حذاء بريزم الرياضي" },
+    "category": "shoes",
+    "price": 145,
+    "colors": ["white"],
+    "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
+    "images": ["https://images.unsplash.com/photo-1560769629-975ec94e6a86"],
+    "description": {
+      "en": "A layered retro runner with suede overlays, a breathable mesh upper and a sugarcane-foam midsole.",
+      "ar": "حذاء رياضي بطابع كلاسيكي بطبقات من الشامواه وجزء علوي شبكي يسمح بالتهوية ونعل من رغوة قصب السكر."
+    },
+    "material": {
+      "en": "Suede, recycled mesh, bio-foam",
+      "ar": "شامواه، شبك معاد تدويره، رغوة حيوية"
+    },
+    "rating": 4.6,
+    "reviewCount": 128,
+    "tags": ["new"],
+    "createdAt": "2026-11-02"
+  },
+  {
+    "id": "vera-top-handle-bag",
+    "name": { "en": "Vera Top-Handle Bag", "ar": "حقيبة فيرا بمقبض علوي" },
+    "category": "bags",
+    "price": 320,
+    "colors": ["red", "black"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1584917865442-de89df76afd3"],
+    "description": {
+      "en": "A structured top-handle in smooth calf with a polished push-lock and a detachable shoulder strap.",
+      "ar": "حقيبة منظّمة بمقبض علوي من جلد العجل الناعم بقفل لامع وحزام كتف قابل للفصل."
+    },
+    "material": { "en": "Calf leather, suede lining", "ar": "جلد عجل، بطانة شامواه" },
+    "rating": 4.9,
+    "reviewCount": 74,
+    "tags": ["bestseller"],
+    "createdAt": "2026-09-05"
+  },
+  {
+    "id": "riviera-wicker-bag",
+    "name": { "en": "Riviera Wicker Bag", "ar": "حقيبة ريفييرا الخوص" },
+    "category": "bags",
+    "price": 265,
+    "colors": ["tan"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1590874103328-eac38a683ce7"],
+    "description": {
+      "en": "Hand-woven rattan framed in vegetable-tanned leather, with a turn-lock flap and cotton lining.",
+      "ar": "روطان منسوج يدويًا بإطار من الجلد المدبوغ نباتيًا، بغطاء بقفل دوّار وبطانة قطنية."
+    },
+    "material": { "en": "Rattan, vegetable-tanned leather", "ar": "روطان، جلد مدبوغ نباتيًا" },
+    "rating": 4.7,
+    "reviewCount": 52,
+    "tags": [],
+    "createdAt": "2026-06-28"
+  },
+  {
+    "id": "maren-satchel",
+    "name": { "en": "Maren Satchel", "ar": "حقيبة مارين" },
+    "category": "bags",
+    "price": 290,
+    "colors": ["teal"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1594223274512-ad4803739b7c"],
+    "description": {
+      "en": "A compact satchel in deep teal pebbled leather with a brass clasp and two interior slip pockets.",
+      "ar": "حقيبة صغيرة من الجلد المحبّب بلون أزرق مخضر عميق بمشبك نحاسي وجيبين داخليين."
+    },
+    "material": { "en": "Pebbled calf leather", "ar": "جلد عجل محبّب" },
+    "rating": 4.6,
+    "reviewCount": 43,
+    "tags": ["new"],
+    "createdAt": "2026-10-22"
+  },
+  {
+    "id": "sorbet-chain-bag",
+    "name": { "en": "Sorbet Chain Shoulder Bag", "ar": "حقيبة سوربيه بسلسلة" },
+    "category": "bags",
+    "price": 198,
+    "compareAtPrice": 240,
+    "colors": ["blush"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d"],
+    "description": {
+      "en": "A slim envelope flap with a colour-blocked chevron and a fine curb chain that converts to a clutch.",
+      "ar": "حقيبة بغطاء على شكل ظرف بنقشة شيفرون ملوّنة وسلسلة رفيعة تتحوّل إلى حقيبة يد."
+    },
+    "material": { "en": "Smooth leather, gold-tone chain", "ar": "جلد ناعم، سلسلة بلون ذهبي" },
+    "rating": 4.3,
+    "reviewCount": 61,
+    "tags": [],
+    "createdAt": "2026-07-14"
+  },
+  {
+    "id": "field-leather-backpack",
+    "name": { "en": "Field Leather Backpack", "ar": "حقيبة ظهر فيلد الجلدية" },
+    "category": "bags",
+    "price": 245,
+    "colors": ["rust", "brown"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1622560480605-d83c853bc5c3"],
+    "description": {
+      "en": "Oiled full-grain leather with a padded 15-inch laptop sleeve and a clean, hardware-free front.",
+      "ar": "جلد كامل الحبيبات مزيّت مع جيب مبطّن للحاسوب 15 إنش وواجهة نظيفة بلا قطع معدنية."
+    },
+    "material": {
+      "en": "Full-grain leather, canvas lining",
+      "ar": "جلد كامل الحبيبات، بطانة كانفاس"
+    },
+    "rating": 4.8,
+    "reviewCount": 95,
+    "tags": [],
+    "createdAt": "2026-08-25"
+  },
+  {
+    "id": "commuter-canvas-backpack",
+    "name": { "en": "Commuter Canvas Backpack", "ar": "حقيبة ظهر كوميوتر القماشية" },
+    "category": "bags",
+    "price": 128,
+    "colors": ["navy", "black"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62"],
+    "description": {
+      "en": "Water-resistant waxed canvas, a clamshell opening and a quick-access back pocket for your passport.",
+      "ar": "كانفاس شمعي مقاوم للماء بفتحة كاملة وجيب خلفي سريع الوصول لجواز السفر."
+    },
+    "material": { "en": "Waxed cotton canvas", "ar": "كانفاس قطني شمعي" },
+    "rating": 4.5,
+    "reviewCount": 182,
+    "tags": ["bestseller"],
+    "createdAt": "2026-07-09"
+  },
+  {
+    "id": "open-heart-pendant",
+    "name": { "en": "Open Heart Pendant", "ar": "قلادة القلب المفتوح" },
+    "category": "accessories",
+    "price": 180,
+    "colors": ["silver"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d"],
+    "description": {
+      "en": "A pavé-set open heart on a fine bead chain in recycled sterling silver. Adjustable 40–45cm.",
+      "ar": "قلب مفتوح مرصّع على سلسلة خرز رفيعة من الفضة الإسترلينية المعاد تدويرها. قابلة للتعديل 40–45 سم."
+    },
+    "material": {
+      "en": "Recycled sterling silver, cubic zirconia",
+      "ar": "فضة إسترلينية معاد تدويرها، زركون"
+    },
+    "rating": 4.8,
+    "reviewCount": 119,
+    "tags": ["bestseller"],
+    "createdAt": "2026-07-30"
+  },
+  {
+    "id": "layered-chain-necklace",
+    "name": { "en": "Layered Chain Necklace", "ar": "قلادة السلاسل المتعدّدة" },
+    "category": "accessories",
+    "price": 125,
+    "colors": ["gold"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1590548784585-643d2b9f2925"],
+    "description": {
+      "en": "Three delicate chains — wheat, cable and a pearl drop — joined on a single clasp so they never tangle.",
+      "ar": "ثلاث سلاسل رقيقة — سنبلة وكابل وقطرة لؤلؤ — على قفل واحد حتى لا تتشابك أبدًا."
+    },
+    "material": { "en": "18k gold vermeil", "ar": "فضة مطلية بذهب عيار 18" },
+    "rating": 4.7,
+    "reviewCount": 88,
+    "tags": ["new"],
+    "createdAt": "2026-10-29"
+  },
+  {
+    "id": "crescent-pendant",
+    "name": { "en": "Crescent Pendant", "ar": "قلادة الهلال" },
+    "category": "accessories",
+    "price": 98,
+    "colors": ["gold"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f"],
+    "description": {
+      "en": "A hand-engraved crescent with tiny set stones, on a 50cm trace chain.",
+      "ar": "هلال محفور يدويًا مرصّع بأحجار صغيرة، على سلسلة رفيعة بطول 50 سم."
+    },
+    "material": { "en": "Gold-plated brass, crystal", "ar": "نحاس مطلي بالذهب، كريستال" },
+    "rating": 4.5,
+    "reviewCount": 64,
+    "tags": [],
+    "createdAt": "2026-08-07"
+  },
+  {
+    "id": "sapphire-drop-earrings",
+    "name": { "en": "Sapphire Drop Earrings", "ar": "أقراط السفير المتدلّية" },
+    "category": "accessories",
+    "price": 215,
+    "colors": ["silver"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1535632066927-ab7c9ab60908"],
+    "description": {
+      "en": "Art-deco inspired drops with a lab-grown sapphire framed by a halo of white stones.",
+      "ar": "أقراط متدلّية مستوحاة من فن الآرت ديكو بحجر سفير مصنّع محاط بهالة من الأحجار البيضاء."
+    },
+    "material": {
+      "en": "Rhodium-plated silver, lab sapphire",
+      "ar": "فضة مطلية بالروديوم، سفير مصنّع"
+    },
+    "rating": 4.9,
+    "reviewCount": 41,
+    "tags": ["limited"],
+    "createdAt": "2026-09-23"
+  },
+  {
+    "id": "freshwater-pearl-strand",
+    "name": { "en": "Freshwater Pearl Strand", "ar": "عقد لؤلؤ المياه العذبة" },
+    "category": "accessories",
+    "price": 260,
+    "colors": ["ivory"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338"],
+    "description": {
+      "en": "Hand-knotted 7mm freshwater pearls with a pavé ball clasp. Each strand is unique.",
+      "ar": "لآلئ مياه عذبة 7 ملم معقودة يدويًا بقفل كروي مرصّع. كل عقد فريد من نوعه."
+    },
+    "material": { "en": "Freshwater pearls, silk thread", "ar": "لؤلؤ مياه عذبة، خيط حرير" },
+    "rating": 4.8,
+    "reviewCount": 57,
+    "tags": [],
+    "createdAt": "2026-08-16"
+  },
+  {
+    "id": "filigree-bangle",
+    "name": { "en": "Filigree Bangle", "ar": "سوار الفيليغري" },
+    "category": "accessories",
+    "price": 148,
+    "colors": ["gold"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1611591437281-460bfbe1220a"],
+    "description": {
+      "en": "An openwork scroll bangle traced in tiny stones, with a hidden hinge for an easy fit.",
+      "ar": "سوار مخرّم بنقوش ملتفّة مرصّعة بأحجار صغيرة، بمفصل مخفي لارتداء سهل."
+    },
+    "material": { "en": "Gold vermeil, white topaz", "ar": "فضة مطلية بالذهب، توباز أبيض" },
+    "rating": 4.6,
+    "reviewCount": 34,
+    "tags": [],
+    "createdAt": "2026-07-19"
+  },
+  {
+    "id": "meridian-leather-watch",
+    "name": { "en": "Meridian Leather Watch", "ar": "ساعة ميريديان الجلدية" },
+    "category": "accessories",
+    "price": 185,
+    "colors": ["stone", "black"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1524592094714-0f0654e20314"],
+    "description": {
+      "en": "A 36mm brushed-steel case, a sunray dial with no numerals and a quick-release suede strap.",
+      "ar": "علبة فولاذية مصقولة 36 ملم وميناء بلمعة شعاعية بلا أرقام وحزام شامواه سريع التبديل."
+    },
+    "material": { "en": "Stainless steel, suede strap", "ar": "فولاذ مقاوم للصدأ، حزام شامواه" },
+    "rating": 4.7,
+    "reviewCount": 102,
+    "tags": [],
+    "createdAt": "2026-09-11"
+  },
+  {
+    "id": "mira-cat-eye-sunglasses",
+    "name": { "en": "Mira Cat-Eye Sunglasses", "ar": "نظارة ميرا الشمسية" },
+    "category": "accessories",
+    "price": 140,
+    "colors": ["gold"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1508296695146-257a814070b4"],
+    "description": {
+      "en": "A soft cat-eye in a fine metal frame with gradient lenses offering full UV400 protection.",
+      "ar": "إطار معدني رفيع على شكل عين القطّة بعدسات متدرّجة توفّر حماية كاملة UV400."
+    },
+    "material": { "en": "Titanium frame, nylon lenses", "ar": "إطار تيتانيوم، عدسات نايلون" },
+    "rating": 4.5,
+    "reviewCount": 76,
+    "tags": [],
+    "createdAt": "2026-06-17"
+  },
+  {
+    "id": "ribbed-wool-beanie",
+    "name": { "en": "Ribbed Wool Beanie", "ar": "قبعة صوفية مضلّعة" },
+    "category": "accessories",
+    "price": 42,
+    "colors": ["rust", "oat", "black"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1556905055-8f358a7a47b2"],
+    "description": {
+      "en": "A deep-cuff beanie in a chunky fisherman rib, knitted from responsibly sourced wool.",
+      "ar": "قبعة بثنية عميقة بنسيج مضلّع سميك، محاكة من صوف من مصادر مسؤولة."
+    },
+    "material": { "en": "100% RWS wool", "ar": "100٪ صوف معتمد" },
+    "rating": 4.6,
+    "reviewCount": 143,
+    "tags": [],
+    "createdAt": "2026-10-05"
+  },
+  {
+    "id": "washed-twill-cap",
+    "name": { "en": "Washed Twill Cap", "ar": "قبعة تويل مغسولة" },
+    "category": "accessories",
+    "price": 38,
+    "colors": ["grey", "stone"],
+    "sizes": ["One size"],
+    "images": ["https://images.unsplash.com/photo-1521369909029-2afed882baee"],
+    "description": {
+      "en": "A low-profile six-panel cap in pigment-washed cotton with a brass slide back.",
+      "ar": "قبعة منخفضة بستّ قطع من القطن المغسول بالصبغة مع مشبك نحاسي خلفي."
+    },
+    "material": { "en": "100% cotton twill", "ar": "100٪ تويل قطني" },
+    "rating": 4.4,
+    "reviewCount": 98,
+    "tags": [],
+    "createdAt": "2026-06-26"
+  }
+]
