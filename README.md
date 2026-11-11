@@ -6,7 +6,19 @@ Vite, TypeScript, Tailwind CSS v4, React Router, Zustand and Framer Motion, in E
 
 ## Features
 
-- **Pages:** Home, Shop (filters plus sort), Product details, Cart, Checkout, Wishlist, Search, 404.
+- **Pages:** Landing (home), Shop (filters plus sort), Product details, Cart, Checkout, Wishlist,
+  Search, Sign in, Create account, Forgot password, Account, 404.
+- **Accounts:** sign up, sign in (with "keep me signed in"), sign out, a 6-digit password-reset
+  code that expires after 15 minutes, and an account page with profile, preferences and order
+  history. Checkout requires an account: signed-out shoppers are sent to sign in and then
+  returned to checkout. See [Demo limitations](#demo-limitations).
+- **Currencies:** over 150 currencies. Prices are listed in USD and converted at daily rates from
+  [open.er-api.com](https://open.er-api.com) (no API key). A bundled snapshot in
+  `src/data/rates.json` is used when offline. Orders record the currency and rate they were paid
+  in.
+- **Colour variants:** choosing a colour on a product page switches the gallery to that colour's
+  photos (`colorImages` in the catalogue). The cart and orders show the chosen colour too. Each
+  listed colour has a real matching photo.
 - **Shop filters:** category, price (dual-thumb range), size, colour and sort. Filters are stored
   in the URL, so you can share a filtered view and it survives a reload.
 - **Cart and wishlist:** stored in `localStorage` with versioned Zustand `persist` stores.
@@ -74,6 +86,7 @@ pnpm dev        # http://localhost:5173
 ```
 src/
 ├── components/
+│   ├── auth/        # Split auth layout and route guards (RequireAuth, GuestOnly)
 │   ├── cart/        # Cart line item, free-shipping meter, order totals (shared by drawer, cart, checkout)
 │   ├── home/        # Hero, new-arrivals rail, editorial spread, category index, lookbook, newsletter
 │   ├── layout/      # Layout (page transitions), header, footer, cart drawer, mobile menu
@@ -85,10 +98,19 @@ src/
 ├── i18n/            # en.ts (source of truth, defines the Messages type), ar.ts, useI18n
 ├── lib/             # Types, constants, catalogue queries, formatting, image URLs, validation
 ├── pages/           # One file per route
-├── store/           # Zustand stores: cart, wishlist, preferences (persisted), ui (transient)
+├── store/           # Zustand stores: cart, wishlist, preferences, session, orders, rates (persisted), ui (transient)
 ├── router.tsx       # Route table with lazy-loaded pages
 └── main.tsx
 ```
+
+## Demo limitations
+
+The store has no backend. Accounts, sessions and orders live in the browser's `localStorage`, so
+an account exists only in the browser where it was created. Passwords and reset codes are hashed
+with PBKDF2 (Web Crypto) and never stored in plain text, but this does not replace server-side
+authentication. With no mail server, the reset code is shown on screen in a "demo inbox" panel.
+To go live, replace `src/lib/auth.ts` with a real auth provider; the UI already calls it through
+async, error-coded functions.
 
 ## Tooling
 
