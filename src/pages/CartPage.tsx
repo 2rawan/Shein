@@ -6,10 +6,12 @@ import { EmptyState, SectionHeading } from "@/components/ui/Typography";
 import { useCartDetails } from "@/hooks/useCartDetails";
 import { useDocumentTitle } from "@/hooks/useDom";
 import { useI18n } from "@/i18n";
+import { useCurrentUser } from "@/store/session";
 
 export default function CartPage() {
   const { t } = useI18n();
   const cart = useCartDetails();
+  const user = useCurrentUser();
   useDocumentTitle(t.meta.cart);
 
   if (!cart.loading && cart.lines.length === 0) {
@@ -58,6 +60,7 @@ export default function CartPage() {
             <h2 className="label">{t.cart.orderSummary}</h2>
             <FreeShippingMeter subtotal={cart.subtotal} remaining={cart.remainingForFreeShipping} />
             <OrderTotals subtotal={cart.subtotal} shipping={cart.freeShipping ? 0 : null}>
+              {!user && <p className="text-xs text-stone">{t.cart.signInToCheckout}</p>}
               <ButtonLink to="/checkout" size="lg" block className="mt-4">
                 {t.cart.checkout}
               </ButtonLink>

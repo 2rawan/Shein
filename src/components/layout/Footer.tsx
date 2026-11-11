@@ -1,13 +1,17 @@
 import { Link } from "react-router";
 import { useI18n } from "@/i18n";
 import { CATEGORIES } from "@/lib/constants";
+import { useCurrentUser } from "@/store/session";
+import { CurrencyButton } from "./CurrencyPicker";
 import { LanguageToggle } from "./Header";
 
 export function Footer() {
   const { t, l } = useI18n();
   const year = new Date().getFullYear();
 
+  const user = useCurrentUser();
   const account = [
+    user ? { to: "/account", label: t.nav.account } : { to: "/login", label: t.nav.signIn },
     { to: "/wishlist", label: t.nav.wishlist },
     { to: "/cart", label: t.cart.title },
     { to: "/search", label: t.nav.search },
@@ -70,6 +74,8 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <span>{t.footer.language}:</span>
             <LanguageToggle compact />
+            <span aria-hidden="true">·</span>
+            <CurrencyButton className="h-auto px-0 text-xs text-ink" />
           </div>
         </div>
       </div>

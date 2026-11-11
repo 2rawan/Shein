@@ -3,12 +3,15 @@ import { Link, NavLink } from "react-router";
 import { Icon } from "@/components/ui/Icon";
 import { IconButton } from "@/components/ui/Button";
 import { useScrolled } from "@/hooks/useDom";
+import { useMoney } from "@/hooks/useMoney";
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/cn";
-import { CATEGORY_BY_ID } from "@/lib/constants";
+import { CATEGORY_BY_ID, FREE_SHIPPING_THRESHOLD } from "@/lib/constants";
 import { selectCartCount, useCart } from "@/store/cart";
+import { useCurrentUser } from "@/store/session";
 import { useUi } from "@/store/ui";
 import { useWishlist } from "@/store/wishlist";
+import { CurrencyButton } from "./CurrencyPicker";
 
 const NAV_CATEGORIES = ["outerwear", "dresses", "knitwear", "accessories"] as const;
 
@@ -54,6 +57,8 @@ const navLink = ({ isActive }: { isActive: boolean }) =>
 
 export function Header() {
   const { t, l } = useI18n();
+  const money = useMoney();
+  const user = useCurrentUser();
   const scrolled = useScrolled();
   const cartCount = useCart(selectCartCount);
   const wishCount = useWishlist((s) => s.ids.length);
@@ -62,7 +67,9 @@ export function Header() {
 
   return (
     <>
-      <p className="bg-ink px-4 py-2 text-center text-[0.75rem] text-paper/85">{t.announcement}</p>
+      <p className="bg-ink px-4 py-2 text-center text-[0.75rem] text-paper/85">
+        {t.announcement(money(FREE_SHIPPING_THRESHOLD))}
+      </p>
       <header
         className={cn(
           "sticky top-0 z-40 border-b transition-[background-color,border-color] duration-500",
@@ -118,8 +125,9 @@ export function Header() {
           </Link>
 
           <div className="flex items-center justify-end">
-            <div className="hidden md:block">
+            <div className="hidden items-center md:flex">
               <LanguageToggle />
+              <CurrencyButton />
             </div>
             <Link
               to="/search"
@@ -128,6 +136,20 @@ export function Header() {
               className="inline-flex size-11 items-center justify-center transition-colors hover:text-clay"
             >
               <Icon name="search" />
+            </Link>
+            <Link
+              to={user ? "/account" : "/login"}
+              aria-label={user ? t.nav.account : t.nav.signIn}
+              title={user ? t.nav.account : t.nav.signIn}
+              className="relative inline-flex size-11 items-center justify-center transition-colors hover:text-clay"
+            >
+              <Icon name="user" />
+              {user && (
+                <span
+                  aria-hidden="true"
+                  className="absolute end-2.5 top-2.5 size-1.5 rounded-full bg-moss"
+                />
+              )}
             </Link>
             <Link
               to="/wishlist"

@@ -4,11 +4,12 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Drawer } from "@/components/ui/Drawer";
 import { useCartDetails } from "@/hooks/useCartDetails";
 import { useI18n } from "@/i18n";
-import { formatPrice } from "@/lib/format";
+import { useMoney } from "@/hooks/useMoney";
 import { useUi } from "@/store/ui";
 
 export function CartDrawer() {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
+  const money = useMoney();
   const open = useUi((s) => s.cartOpen);
   const close = useUi((s) => s.closeCart);
   const cart = useCartDetails();
@@ -24,9 +25,7 @@ export function CartDrawer() {
           <div className="flex flex-col gap-4">
             <div className="flex items-baseline justify-between">
               <span className="text-ink-soft">{t.cart.subtotal}</span>
-              <span className="font-display text-2xl tabular-nums">
-                {formatPrice(cart.subtotal, locale)}
-              </span>
+              <span className="font-display text-2xl tabular-nums">{money(cart.subtotal)}</span>
             </div>
             <div className="grid grid-cols-2 gap-3">
               <ButtonLink to="/cart" variant="outline" onClick={close}>

@@ -18,13 +18,20 @@ export function imageUrl(base: string, opts: ImageOptions): string {
     h: String(Math.round(width / aspect)),
     q: String(quality),
   });
-  if (zoom && zoom > 1) {
+  // Catalogue entries may carry their own focal-point crop (one colour cut from a
+  // multi-colour shot); that crop wins over generic zoom requests.
+  const [path = base, preset] = base.split("?");
+  if (preset) {
+    new URLSearchParams(preset).forEach((value, key) => {
+      params.set(key, value);
+    });
+  } else if (zoom && zoom > 1) {
     params.set("crop", "focalpoint");
     params.set("fp-x", "0.5");
     params.set("fp-y", String(focusY));
     params.set("fp-z", String(zoom));
   }
-  return `${base}?${params.toString()}`;
+  return `${path}?${params.toString()}`;
 }
 
 const SRCSET_WIDTHS = [360, 540, 720, 960, 1280, 1600];

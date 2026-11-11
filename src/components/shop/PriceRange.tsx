@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useI18n } from "@/i18n";
-import { formatPrice } from "@/lib/format";
+import { useMoney } from "@/hooks/useMoney";
 
 interface PriceRangeProps {
   bounds: [number, number];
@@ -14,7 +14,8 @@ interface PriceRangeProps {
  * written on release so history and filtering don't thrash.
  */
 export function PriceRange({ bounds, min, max, onCommit }: PriceRangeProps) {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
+  const money = useMoney();
   const [lo, hi] = bounds;
   const [value, setValue] = useState<[number, number]>([min ?? lo, max ?? hi]);
 
@@ -46,7 +47,7 @@ export function PriceRange({ bounds, min, max, onCommit }: PriceRangeProps) {
         <input
           type="range"
           aria-label={t.shop.minPrice}
-          aria-valuetext={formatPrice(value[0], locale)}
+          aria-valuetext={money(value[0])}
           min={lo}
           max={hi}
           step={step}
@@ -62,7 +63,7 @@ export function PriceRange({ bounds, min, max, onCommit }: PriceRangeProps) {
         <input
           type="range"
           aria-label={t.shop.maxPrice}
-          aria-valuetext={formatPrice(value[1], locale)}
+          aria-valuetext={money(value[1])}
           min={lo}
           max={hi}
           step={step}
@@ -77,8 +78,8 @@ export function PriceRange({ bounds, min, max, onCommit }: PriceRangeProps) {
         />
       </div>
       <div className="flex justify-between text-sm text-ink-soft tabular-nums">
-        <span>{formatPrice(value[0], locale)}</span>
-        <span>{formatPrice(value[1], locale)}</span>
+        <span>{money(value[0])}</span>
+        <span>{money(value[1])}</span>
       </div>
     </div>
   );

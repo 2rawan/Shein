@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useI18n } from "@/i18n";
 import { SORT_KEYS, type CatalogFilters } from "@/lib/catalog";
 import { CATEGORY_BY_ID, COLOR_BY_ID } from "@/lib/constants";
-import { formatPrice } from "@/lib/format";
+import { useMoney } from "@/hooks/useMoney";
 import type { SortKey } from "@/lib/types";
 import { Icon } from "@/components/ui/Icon";
 
@@ -37,7 +37,8 @@ interface ActiveFiltersProps {
 }
 
 export function ActiveFilters({ filters, onToggle, onClearPrice, onClearAll }: ActiveFiltersProps) {
-  const { t, l, locale } = useI18n();
+  const { t, l } = useI18n();
+  const money = useMoney();
 
   const chips: { id: string; label: string; remove: () => void }[] = [
     ...filters.categories.map((c) => ({
@@ -63,8 +64,8 @@ export function ActiveFilters({ filters, onToggle, onClearPrice, onClearAll }: A
     })),
   ];
   if (filters.minPrice !== null || filters.maxPrice !== null) {
-    const from = filters.minPrice !== null ? formatPrice(filters.minPrice, locale) : "";
-    const to = filters.maxPrice !== null ? formatPrice(filters.maxPrice, locale) : "";
+    const from = filters.minPrice !== null ? money(filters.minPrice) : "";
+    const to = filters.maxPrice !== null ? money(filters.maxPrice) : "";
     chips.push({
       id: "price",
       label: from && to ? `${from} – ${to}` : from ? `≥ ${from}` : `≤ ${to}`,

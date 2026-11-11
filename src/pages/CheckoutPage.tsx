@@ -1,17 +1,22 @@
 import { motion } from "framer-motion";
-import { useRef, useState, type ReactNode, type SyntheticEvent } from "react";
+import { useState, type ReactNode, type SyntheticEvent } from "react";
 import { CartLineItem } from "@/components/cart/CartLineItem";
 import { OrderTotals } from "@/components/cart/OrderTotals";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { SelectField, TextField } from "@/components/ui/Field";
+import { FormAlert } from "@/components/ui/FormControls";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState, SectionHeading } from "@/components/ui/Typography";
 import { useCartDetails } from "@/hooks/useCartDetails";
 import { useDocumentTitle } from "@/hooks/useDom";
+import { useForm, type Rule } from "@/hooks/useForm";
+import { useCurrency, useMoney } from "@/hooks/useMoney";
 import { useI18n } from "@/i18n";
+import { imagesForColor } from "@/lib/catalog";
 import { cn } from "@/lib/cn";
 import { SHIPPING_RATES, type ShippingMethod } from "@/lib/constants";
-import { formatPrice } from "@/lib/format";
+import { currencyName } from "@/lib/currency";
+import { INTL_LOCALE } from "@/lib/format";
 import {
   cardNumber,
   compose,
@@ -24,12 +29,28 @@ import {
   phone,
   postalCode,
   required,
-  type ValidationError,
-  type Validator,
 } from "@/lib/validation";
 import { useCart } from "@/store/cart";
+import { useOrders } from "@/store/orders";
+import { useCurrentUser } from "@/store/session";
 
-const FIELDS = {
+type FieldName =
+  | "email"
+  | "phone"
+  | "firstName"
+  | "lastName"
+  | "address"
+  | "apartment"
+  | "city"
+  | "country"
+  | "postalCode"
+  | "cardName"
+  | "cardNumber"
+  | "expiry"
+  | "cvc";
+
+// Declaration order is the focus order for the first invalid field.
+const rules: Record<FieldName, Rule<FieldName>> = {
   email: compose(required, email),
   phone: compose(required, phone),
   firstName: required,
@@ -43,44 +64,9 @@ const FIELDS = {
   cardNumber: compose(required, cardNumber),
   expiry: compose(required, expiry()),
   cvc: compose(required, cvc),
-} satisfies Record<string, Validator>;
-
-type FieldName = keyof typeof FIELDS;
-type Values = Record<FieldName, string>;
-type Errors = Partial<Record<FieldName, ValidationError>>;
-
-const INITIAL: Values = {
-  email: "",
-  phone: "",
-  firstName: "",
-  lastName: "",
-  address: "",
-  apartment: "",
-  city: "",
-  country: "AE",
-  postalCode: "",
-  cardName: "",
-  cardNumber: "",
-  expiry: "",
-  cvc: "",
 };
 
-const FIELD_ORDER = Object.keys(FIELDS) as FieldName[];
-
-function validateAll(values: Values): Errors {
-  const errors: Errors = {};
-  for (const name of FIELD_ORDER) {
-    const error = FIELDS[name](values[name]);
-    if (error) errors[name] = error;
-  }
-  return errors;
-}
-
-/** Returns a copy of `errors` with `name` set to `error`, or removed when valid. */
-function withFieldError(errors: Errors, name: FieldName, error: ValidationError | null): Errors {
-  const rest = Object.fromEntries(Object.entries(errors).filter(([key]) => key !== name));
-  return error ? { ...rest, [name]: error } : rest;
-}
+const format = { cardNumber: formatCardNumber, expiry: formatExpiry };
 
 interface Confirmation {
   order: string;
@@ -99,74 +85,78 @@ function Fieldset({ step, title, children }: { step: number; title: string; chil
   );
 }
 
+/** Rendered behind RequireAuth, so a signed-in user is always present. */
 export default function CheckoutPage() {
   const { t, locale } = useI18n();
+  const money = useMoney();
+  const { currency, rate } = useCurrency();
+  const user = useCurrentUser();
   const cart = useCartDetails();
   const clearCart = useCart((s) => s.clear);
+  const addOrder = useOrders((s) => s.add);
   useDocumentTitle(t.meta.checkout);
 
-  const [values, setValues] = useState<Values>(INITIAL);
-  const [errors, setErrors] = useState<Errors>({});
-  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
+  const form = useForm({
+    rules,
+    format,
+    initial: {
+      email: user?.email ?? "",
+      phone: "",
+      firstName: user?.firstName ?? "",
+      lastName: user?.lastName ?? "",
+      address: "",
+      apartment: "",
+      city: "",
+      country: "AE",
+      postalCode: "",
+      cardName: user ? `${user.firstName} ${user.lastName}` : "",
+      cardNumber: "",
+      expiry: "",
+      cvc: "",
+    },
+  });
   const [shipping, setShipping] = useState<ShippingMethod>("standard");
   const [submitting, setSubmitting] = useState(false);
   const [confirmation, setConfirmation] = useState<Confirmation | null>(null);
   const [showSummary, setShowSummary] = useState(false);
-  const summaryRef = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
 
-  const shippingCost =
-    shipping === "express"
-      ? SHIPPING_RATES.express
-      : cart.freeShipping
-        ? 0
-        : SHIPPING_RATES.standard;
+  const costOf = (method: ShippingMethod) =>
+    method === "standard" && cart.freeShipping ? 0 : SHIPPING_RATES[method];
+  const shippingCost = costOf(shipping);
   const total = cart.subtotal + shippingCost;
-  const errorCount = Object.keys(errors).length;
 
-  const setValue = (name: FieldName, raw: string) => {
-    const value =
-      name === "cardNumber" ? formatCardNumber(raw) : name === "expiry" ? formatExpiry(raw) : raw;
-    setValues((v) => ({ ...v, [name]: value }));
-    // Re-validate live once a field has been visited, so errors clear as you type.
-    if (touched[name]) {
-      setErrors((e) => withFieldError(e, name, FIELDS[name](value)));
-    }
-  };
-
-  const onBlur = (name: FieldName) => {
-    setTouched((tch) => ({ ...tch, [name]: true }));
-    setErrors((e) => withFieldError(e, name, FIELDS[name](values[name])));
-  };
-
-  const field = (name: FieldName) => ({
-    name,
-    value: values[name],
-    error: errors[name] ? t.checkout.errors[errors[name]] : undefined,
-    label: t.checkout.fields[name],
-    onChange: (e: { target: { value: string } }) => {
-      setValue(name, e.target.value);
-    },
-    onBlur: () => {
-      onBlur(name);
-    },
-  });
+  const field = (name: FieldName) => ({ label: t.checkout.fields[name], ...form.field(name) });
 
   const onSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const nextErrors = validateAll(values);
-    setErrors(nextErrors);
-    setTouched(Object.fromEntries(FIELD_ORDER.map((n) => [n, true])));
-    const firstInvalid = FIELD_ORDER.find((n) => nextErrors[n]);
-    if (firstInvalid) {
-      formRef.current?.querySelector<HTMLElement>(`[name="${firstInvalid}"]`)?.focus();
-      return;
-    }
+    const values = form.validate(e.currentTarget);
+    if (!values || !user) return;
     setSubmitting(true);
     // Simulated payment round-trip.
     await new Promise((r) => setTimeout(r, 1200));
-    const order = `NV-${Date.now().toString(36).slice(-6).toUpperCase()}`;
-    setConfirmation({ order, email: values.email });
+    const id = `NV-${Date.now().toString(36).slice(-6).toUpperCase()}`;
+    addOrder({
+      id,
+      userId: user.id,
+      createdAt: new Date().toISOString(),
+      lines: cart.lines.map((line) => ({
+        productId: line.productId,
+        name: line.product.name,
+        image: imagesForColor(line.product, line.color)[0] ?? "",
+        color: line.color,
+        size: line.size,
+        quantity: line.quantity,
+        unitPrice: line.product.price,
+      })),
+      subtotal: cart.subtotal,
+      shipping: shippingCost,
+      total,
+      currency,
+      rate,
+      shipCity: values.city,
+      shipCountry: values.country,
+    });
+    setConfirmation({ order: id, email: values.email });
     clearCart();
     setSubmitting(false);
     window.scrollTo({ top: 0 });
@@ -192,9 +182,14 @@ export default function CheckoutPage() {
           <p className="text-lg text-ink-soft">
             {t.checkout.successBody(confirmation.order, confirmation.email)}
           </p>
-          <ButtonLink to="/shop" size="lg">
-            {t.checkout.successCta}
-          </ButtonLink>
+          <div className="flex flex-wrap gap-3">
+            <ButtonLink to="/account" size="lg">
+              {t.nav.account}
+            </ButtonLink>
+            <ButtonLink to="/shop" size="lg" variant="outline">
+              {t.checkout.successCta}
+            </ButtonLink>
+          </div>
         </motion.div>
       </div>
     );
@@ -220,8 +215,10 @@ export default function CheckoutPage() {
 
   return (
     <div className="container-nova pt-10 md:pt-16">
-      <div className="mb-10 flex items-end justify-between gap-6">
-        <SectionHeading as="h1" size="lg" title={t.checkout.title} />
+      <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <SectionHeading as="h1" size="lg" title={t.checkout.title}>
+          {user && <p className="text-sm text-stone">{t.checkout.signedInAs(user.email)}</p>}
+        </SectionHeading>
         <p className="flex items-center gap-2 text-sm text-stone">
           <Icon name="lock" size={16} />
           {t.checkout.secure}
@@ -230,7 +227,7 @@ export default function CheckoutPage() {
 
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-6">
         <aside className="lg:order-2 lg:col-span-4 lg:col-start-9" aria-label={t.cart.orderSummary}>
-          <div ref={summaryRef} className="bg-bone/70 p-6 md:p-8 lg:sticky lg:top-28">
+          <div className="bg-bone/70 p-6 md:p-8 lg:sticky lg:top-28">
             <button
               type="button"
               className="flex w-full items-center justify-between lg:pointer-events-none"
@@ -241,7 +238,7 @@ export default function CheckoutPage() {
             >
               <span className="label">{t.cart.orderSummary}</span>
               <span className="flex items-center gap-2 font-display text-xl tabular-nums lg:hidden">
-                {formatPrice(total, locale)}
+                {money(total)}
                 <Icon
                   name="chevronDown"
                   size={16}
@@ -263,20 +260,12 @@ export default function CheckoutPage() {
         </aside>
 
         <form
-          ref={formRef}
           noValidate
           onSubmit={onSubmit}
           className="flex flex-col gap-12 lg:order-1 lg:col-span-7"
-          aria-describedby={errorCount ? "checkout-errors" : undefined}
         >
-          {errorCount > 0 && Object.values(touched).some(Boolean) && (
-            <div
-              id="checkout-errors"
-              role="alert"
-              className="border-s-2 border-danger bg-white px-5 py-4 text-sm text-danger"
-            >
-              {t.checkout.errorSummaryTitle(errorCount)}
-            </div>
+          {form.submitted && form.errorCount > 0 && (
+            <FormAlert>{t.checkout.errorSummaryTitle(form.errorCount)}</FormAlert>
           )}
 
           <Fieldset step={1} title={t.checkout.contact}>
@@ -328,8 +317,7 @@ export default function CheckoutPage() {
             <div className="clear-both grid gap-3 sm:grid-cols-2">
               {(Object.keys(SHIPPING_RATES) as ShippingMethod[]).map((method) => {
                 const option = t.checkout.deliveryOptions[method];
-                const cost =
-                  method === "standard" && cart.freeShipping ? 0 : SHIPPING_RATES[method];
+                const cost = costOf(method);
                 return (
                   <label key={method} className="cursor-pointer">
                     <input
@@ -348,7 +336,7 @@ export default function CheckoutPage() {
                         <span className="text-[0.8125rem] text-stone">{option.detail}</span>
                       </span>
                       <span className="tabular-nums">
-                        {cost === 0 ? t.cart.shippingFree : formatPrice(cost, locale)}
+                        {cost === 0 ? t.cart.shippingFree : money(cost)}
                       </span>
                     </span>
                   </label>
@@ -358,7 +346,10 @@ export default function CheckoutPage() {
           </fieldset>
 
           <Fieldset step={4} title={t.checkout.payment}>
-            <p className="text-[0.8125rem] text-stone sm:col-span-2">{t.checkout.paymentNote}</p>
+            <p className="text-[0.8125rem] text-stone sm:col-span-2">
+              {t.checkout.chargedIn(currencyName(currency, INTL_LOCALE[locale]))}{" "}
+              {t.checkout.paymentNote}
+            </p>
             <TextField
               {...field("cardName")}
               autoComplete="cc-name"
@@ -389,13 +380,7 @@ export default function CheckoutPage() {
             />
           </Fieldset>
 
-          <Button
-            type="submit"
-            size="lg"
-            block
-            disabled={submitting || cart.loading}
-            aria-live="polite"
-          >
+          <Button type="submit" size="lg" block disabled={submitting || cart.loading}>
             {submitting ? (
               <>
                 <motion.span
@@ -407,7 +392,7 @@ export default function CheckoutPage() {
                 {t.checkout.processing}
               </>
             ) : (
-              t.checkout.placeOrder(formatPrice(total, locale))
+              t.checkout.placeOrder(money(total))
             )}
           </Button>
         </form>

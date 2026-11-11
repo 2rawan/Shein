@@ -42,6 +42,8 @@ export interface Product {
   sizes: string[];
   soldOutSizes?: string[];
   images: string[];
+  /** Photos per colour; colours without an entry fall back to `images`. */
+  colorImages?: Partial<Record<ColorId, string[]>>;
   description: Localized;
   material: Localized;
   rating: number;

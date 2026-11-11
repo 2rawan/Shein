@@ -7,7 +7,11 @@ export type ValidationError =
   | "expiry"
   | "expired"
   | "cvc"
-  | "minLength";
+  | "minLength"
+  | "password"
+  | "passwordMatch"
+  | "code"
+  | "terms";
 
 export type Validator = (value: string) => ValidationError | null;
 
@@ -64,6 +68,23 @@ export const expiry =
     const endOfMonth = new Date(year, month, 0, 23, 59, 59);
     return endOfMonth >= now ? null : "expired";
   };
+
+/** At least 8 characters with a letter and a digit. */
+export const password: Validator = (v) =>
+  v.length >= 8 && /[A-Za-z\u0600-\u06FF]/.test(v) && /\d/.test(v) ? null : "password";
+
+export const resetCode: Validator = (v) => (/^\d{6}$/.test(v.trim()) ? null : "code");
+
+/** Rough 0–4 score used only for the strength meter, never for acceptance. */
+export function passwordStrength(v: string): number {
+  if (!v) return 0;
+  let score = 0;
+  if (v.length >= 8) score++;
+  if (v.length >= 12) score++;
+  if (/[a-z]/.test(v) && /[A-Z]/.test(v)) score++;
+  if (/\d/.test(v) && /[^A-Za-z0-9]/.test(v)) score++;
+  return score;
+}
 
 export const cvc: Validator = (v) => (/^\d{3,4}$/.test(v.trim()) ? null : "cvc");
 

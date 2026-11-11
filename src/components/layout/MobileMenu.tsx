@@ -4,12 +4,15 @@ import { Icon } from "@/components/ui/Icon";
 import { useI18n } from "@/i18n";
 import { CATEGORIES } from "@/lib/constants";
 import { useUi } from "@/store/ui";
+import { useCurrentUser } from "@/store/session";
+import { CurrencyButton } from "./CurrencyPicker";
 import { LanguageToggle } from "./Header";
 
 export function MobileMenu() {
   const { t, l } = useI18n();
   const open = useUi((s) => s.menuOpen);
   const setMenuOpen = useUi((s) => s.setMenuOpen);
+  const user = useCurrentUser();
   const close = () => {
     setMenuOpen(false);
   };
@@ -18,6 +21,7 @@ export function MobileMenu() {
     { to: "/shop", label: t.nav.shop },
     { to: "/shop?sort=newest", label: t.nav.newIn },
     { to: "/wishlist", label: t.nav.wishlist },
+    user ? { to: "/account", label: t.nav.account } : { to: "/login", label: t.nav.signIn },
     { to: "/search", label: t.nav.search },
   ];
 
@@ -27,7 +31,12 @@ export function MobileMenu() {
       onClose={close}
       title={t.nav.menu}
       side="start"
-      footer={<LanguageToggle className="-ms-2" />}
+      footer={
+        <div className="flex items-center justify-between">
+          <LanguageToggle className="-ms-2" />
+          <CurrencyButton className="-me-2" />
+        </div>
+      }
     >
       <nav aria-label={t.nav.primary} className="flex flex-col px-6 py-8">
         <ul className="flex flex-col gap-1">
