@@ -1,8 +1,11 @@
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
+import { useEffect } from "react";
 import { ScrollRestoration, useLocation, useOutlet } from "react-router";
 import { useDocumentLocale, useI18n } from "@/i18n";
+import { useRates } from "@/store/rates";
 import { useUi } from "@/store/ui";
 import { CartDrawer } from "./CartDrawer";
+import { CurrencyPicker } from "./CurrencyPicker";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { MobileMenu } from "./MobileMenu";
@@ -13,6 +16,11 @@ export function Layout() {
   const location = useLocation();
   const outlet = useOutlet();
   const announcement = useUi((s) => s.announcement);
+  const refreshRates = useRates((s) => s.refresh);
+
+  useEffect(() => {
+    void refreshRates();
+  }, [refreshRates]);
 
   return (
     <MotionConfig reducedMotion="user">
@@ -41,6 +49,7 @@ export function Layout() {
       <Footer />
       <CartDrawer />
       <MobileMenu />
+      <CurrencyPicker />
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {announcement}
       </div>

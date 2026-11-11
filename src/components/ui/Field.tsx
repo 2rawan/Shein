@@ -8,6 +8,8 @@ interface FieldShellProps {
   error?: string | undefined;
   hint?: string | undefined;
   optionalLabel?: string | undefined;
+  /** Rendered beside the label but outside it, e.g. a "Forgot password?" link. */
+  aside?: ReactNode;
   className?: string | undefined;
   children: ReactNode;
 }
@@ -18,15 +20,19 @@ function FieldShell({
   error,
   hint,
   optionalLabel,
+  aside,
   className,
   children,
 }: FieldShellProps) {
   return (
     <div className={cn("flex flex-col gap-2", className)}>
-      <label htmlFor={id} className="flex items-baseline justify-between text-sm text-ink-soft">
-        <span>{label}</span>
+      <div className="flex items-baseline justify-between gap-3 text-sm">
+        <label htmlFor={id} className="text-ink-soft">
+          {label}
+        </label>
         {optionalLabel && <span className="text-xs text-stone">{optionalLabel}</span>}
-      </label>
+        {aside}
+      </div>
       {children}
       {error ? (
         <p id={`${id}-error`} className="text-[0.8125rem] text-danger">
@@ -55,6 +61,9 @@ type TextFieldProps = Omit<ComponentPropsWithRef<"input">, "id"> & {
   error?: string | undefined;
   hint?: string | undefined;
   optionalLabel?: string | undefined;
+  aside?: ReactNode;
+  /** Control rendered inside the input box at the end edge (e.g. show-password). */
+  trailing?: ReactNode;
   wrapperClassName?: string;
 };
 
@@ -63,6 +72,8 @@ export function TextField({
   error,
   hint,
   optionalLabel,
+  aside,
+  trailing,
   wrapperClassName,
   className,
   ...rest
@@ -75,15 +86,19 @@ export function TextField({
       error={error}
       hint={hint}
       optionalLabel={optionalLabel}
+      aside={aside}
       className={wrapperClassName}
     >
-      <input
-        id={id}
-        aria-invalid={error ? true : undefined}
-        aria-describedby={describedBy(id, error, hint)}
-        className={cn(control(Boolean(error)), className)}
-        {...rest}
-      />
+      <div className="relative">
+        <input
+          id={id}
+          aria-invalid={error ? true : undefined}
+          aria-describedby={describedBy(id, error, hint)}
+          className={cn(control(Boolean(error)), trailing ? "pe-12" : undefined, className)}
+          {...rest}
+        />
+        {trailing && <div className="absolute inset-y-0 end-0 flex items-center">{trailing}</div>}
+      </div>
     </FieldShell>
   );
 }

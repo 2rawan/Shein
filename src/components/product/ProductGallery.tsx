@@ -18,7 +18,8 @@ interface GalleryFrame {
 function buildFrames(images: string[], name: string, detailLabel: string): GalleryFrame[] {
   return images.flatMap((src, i) => {
     const frames: GalleryFrame[] = [{ src, alt: name }];
-    if (i === 0) {
+    // Pre-cropped shots are already a detail; zooming further would lose the garment.
+    if (i === 0 && !src.includes("?")) {
       frames.push({ src, zoom: 1.8, focusY: 0.35, alt: `${name} — ${detailLabel}` });
       frames.push({ src, zoom: 2.4, focusY: 0.6, alt: `${name} — ${detailLabel}` });
     }

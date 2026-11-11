@@ -1,6 +1,6 @@
 import { useI18n } from "@/i18n";
 import { cn } from "@/lib/cn";
-import { formatPrice } from "@/lib/format";
+import { useMoney } from "@/hooks/useMoney";
 
 interface PriceProps {
   amount: number;
@@ -9,15 +9,16 @@ interface PriceProps {
 }
 
 export function Price({ amount, compareAt, className }: PriceProps) {
-  const { locale, t } = useI18n();
+  const { t } = useI18n();
+  const money = useMoney();
   const onSale = compareAt !== undefined && compareAt > amount;
   return (
     <span className={cn("inline-flex items-baseline gap-2 tabular-nums", className)}>
-      <span className={onSale ? "text-clay" : undefined}>{formatPrice(amount, locale)}</span>
+      <span className={onSale ? "text-clay" : undefined}>{money(amount)}</span>
       {onSale && (
         <s className="text-stone">
           <span className="sr-only">{t.product.originalPrice} </span>
-          {formatPrice(compareAt, locale)}
+          {money(compareAt)}
         </s>
       )}
     </span>

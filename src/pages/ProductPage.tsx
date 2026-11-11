@@ -12,10 +12,11 @@ import { Price } from "@/components/ui/Price";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { Rating, SectionHeading } from "@/components/ui/Typography";
 import { useDocumentTitle } from "@/hooks/useDom";
+import { useMoney } from "@/hooks/useMoney";
 import { useProducts } from "@/hooks/useProducts";
 import { useI18n } from "@/i18n";
-import { relatedProducts } from "@/lib/catalog";
-import { CATEGORY_BY_ID } from "@/lib/constants";
+import { imagesForColor, relatedProducts } from "@/lib/catalog";
+import { CATEGORY_BY_ID, FREE_SHIPPING_THRESHOLD } from "@/lib/constants";
 import type { ColorId, Product } from "@/lib/types";
 import { useCart } from "@/store/cart";
 import { useUi } from "@/store/ui";
@@ -38,6 +39,7 @@ function ProductSkeleton() {
 
 function ProductDetails({ product, all }: { product: Product; all: Product[] }) {
   const { t, l } = useI18n();
+  const money = useMoney();
   const add = useCart((s) => s.add);
   const openCart = useUi((s) => s.openCart);
   const announce = useUi((s) => s.announce);
@@ -101,7 +103,8 @@ function ProductDetails({ product, all }: { product: Product; all: Product[] }) 
 
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-6">
           <div className="lg:col-span-7">
-            <ProductGallery images={product.images} name={name} />
+            {/* Re-keyed per colour so the gallery resets to the first shot of the new colour. */}
+            <ProductGallery key={color} images={imagesForColor(product, color)} name={name} />
           </div>
 
           <div className="lg:col-span-4 lg:col-start-9">
@@ -187,7 +190,7 @@ function ProductDetails({ product, all }: { product: Product; all: Product[] }) 
                   {t.product.careText}
                 </AccordionItem>
                 <AccordionItem title={t.product.shippingReturns}>
-                  {t.product.shippingText}
+                  {t.product.shippingText(money(FREE_SHIPPING_THRESHOLD))}
                 </AccordionItem>
               </div>
             </div>

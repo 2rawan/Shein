@@ -1,5 +1,6 @@
 import { lazy, Suspense, type ReactNode } from "react";
 import { createBrowserRouter } from "react-router";
+import { GuestOnly, RequireAuth } from "@/components/auth/RequireAuth";
 import { Layout } from "@/components/layout/Layout";
 import { Skeleton } from "@/components/ui/Skeleton";
 import HomePage from "@/pages/HomePage";
@@ -12,6 +13,10 @@ const CheckoutPage = lazy(() => import("@/pages/CheckoutPage"));
 const WishlistPage = lazy(() => import("@/pages/WishlistPage"));
 const SearchPage = lazy(() => import("@/pages/SearchPage"));
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
+const LoginPage = lazy(() => import("@/pages/LoginPage"));
+const SignupPage = lazy(() => import("@/pages/SignupPage"));
+const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPasswordPage"));
+const AccountPage = lazy(() => import("@/pages/AccountPage"));
 
 function PageFallback() {
   return (
@@ -37,7 +42,46 @@ export const router = createBrowserRouter([
       { path: "shop", element: page(<ShopPage />) },
       { path: "product/:id", element: page(<ProductPage />) },
       { path: "cart", element: page(<CartPage />) },
-      { path: "checkout", element: page(<CheckoutPage />) },
+      {
+        path: "checkout",
+        element: page(
+          <RequireAuth>
+            <CheckoutPage />
+          </RequireAuth>,
+        ),
+      },
+      {
+        path: "account",
+        element: page(
+          <RequireAuth>
+            <AccountPage />
+          </RequireAuth>,
+        ),
+      },
+      {
+        path: "login",
+        element: page(
+          <GuestOnly>
+            <LoginPage />
+          </GuestOnly>,
+        ),
+      },
+      {
+        path: "signup",
+        element: page(
+          <GuestOnly>
+            <SignupPage />
+          </GuestOnly>,
+        ),
+      },
+      {
+        path: "forgot-password",
+        element: page(
+          <GuestOnly>
+            <ForgotPasswordPage />
+          </GuestOnly>,
+        ),
+      },
       { path: "wishlist", element: page(<WishlistPage />) },
       { path: "search", element: page(<SearchPage />) },
       { path: "*", element: page(<NotFoundPage />) },

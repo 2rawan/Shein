@@ -112,3 +112,8 @@ export function relatedProducts(products: readonly Product[], product: Product, 
     .sort((a, b) => b.rating - a.rating)
     .slice(0, limit);
 }
+
+/** Photos for a specific colour, falling back to the product's default shots. */
+export function imagesForColor(product: Product, color: ColorId): string[] {
+  return product.colorImages?.[color] ?? product.images;
+}

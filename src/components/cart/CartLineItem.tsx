@@ -4,8 +4,9 @@ import { QuantityStepper } from "@/components/ui/QuantityStepper";
 import { SmartImage } from "@/components/ui/SmartImage";
 import type { ResolvedLine } from "@/hooks/useCartDetails";
 import { useI18n } from "@/i18n";
+import { imagesForColor } from "@/lib/catalog";
 import { cn } from "@/lib/cn";
-import { formatPrice } from "@/lib/format";
+import { useMoney } from "@/hooks/useMoney";
 import { COLOR_BY_ID } from "@/lib/constants";
 import { useCart } from "@/store/cart";
 
@@ -32,7 +33,7 @@ export function CartLineItem({ line, compact = false, onNavigate }: CartLineItem
         tabIndex={-1}
         aria-hidden="true"
       >
-        <SmartImage src={line.product.images[0] ?? ""} alt="" sizes="112px" />
+        <SmartImage src={imagesForColor(line.product, line.color)[0] ?? ""} alt="" sizes="112px" />
       </Link>
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-start justify-between gap-3">
@@ -96,15 +97,14 @@ export function FreeShippingMeter({
   subtotal: number;
   remaining: number;
 }) {
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
+  const money = useMoney();
   const pct = Math.min(100, (subtotal / (subtotal + remaining || 1)) * 100);
   const unlocked = remaining <= 0;
   return (
     <div className="flex flex-col gap-2.5">
       <p className="text-[0.8125rem] text-ink-soft">
-        {unlocked
-          ? t.cart.freeShippingUnlocked
-          : t.cart.freeShippingRemaining(formatPrice(remaining, locale))}
+        {unlocked ? t.cart.freeShippingUnlocked : t.cart.freeShippingRemaining(money(remaining))}
       </p>
       <div className="h-px w-full bg-line">
         <div
